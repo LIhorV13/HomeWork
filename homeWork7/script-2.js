@@ -10,7 +10,6 @@ const origin = {
   function compare(target, origin) {
     let origin1 = {};
     let target1 = {};
-    let res = false;
     if(Object.keys(target).length > Object.keys(origin).length) {
       origin1 = Object.assign(target);
       target1 = Object.assign(origin);
