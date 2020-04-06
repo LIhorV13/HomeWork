@@ -18,15 +18,10 @@ const origin = {
       origin1 = Object.assign(origin);
       target1 = Object.assign(target);
     }
-    for (let [key, value] of Object.entries(origin1)) {
-      for (let [key1, value1] of Object.entries(target1)) {
-        if (key === key1 && value === value1) {
-          res = true;
-          break;
-        }
-      }
-      if (res === false) return false;
-      else res = false;
+    for (let key in origin1) {
+      if(target1[key] !== origin1[key]) {
+        return false;
+      } 
     }
     return true;
   }
